@@ -1,0 +1,421 @@
+:root {
+    --base: #FFF;
+    --border: #D1D1D1;
+    --search-bar-font: #888888;
+    --text: #080808;
+    --fade-text: #4F4F4F;
+    --alert-text: #F9B355;
+    --border-focus: #FBCA76;
+    --button: #F9B355;
+    --button-border: #FBCA76;
+    --button-hover: #FBCA76;
+    --journal-hover: #FEF2D6;
+    --popup: #080808;
+    --thumb: #D1D1D1;
+    --thumb-hover: #B0B0B0;
+    --loading: #B0B0B0;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
+    color: var(--text);
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--base);
+}
+
+/* Custom scrollbar style */
+::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--base);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--thumb);
+    border-radius: 1.6em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--thumb-hover);
+}
+
+/* Header style */
+.header {
+    height: 16em;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* App name style */
+.app-name {
+    height: 6em;
+    width: 100%;
+    margin-bottom: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+}
+
+.app-name img {
+    height: 3.2em;
+    width: 3.2em;
+}
+
+.app-name div h1 {
+    font-size: 24pt;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 0.16em;
+    line-height: 0.8em;
+}
+
+.app-name div p {
+    margin: 0;
+    font-size: 8.6pt;
+    color: var(--fade-text);
+}
+
+/* Search bar style */
+.search {
+    display: flex;
+    gap: 0.8em;
+}
+
+.search input {
+    width: 42vw;
+    height: 2.4em;
+    padding: 0 1.6em;
+    border: 0.1em solid var(--border);
+    background-color: var(--base);
+    border-radius: 1.6em;
+    transition: all 80ms ease-out;
+}
+
+.search input::placeholder {
+    color: var(--search-bar-font);
+}
+
+.search input:focus {
+    border-color: var(--border-focus);
+    outline: none;
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.6em;
+    border: 0.1em solid var(--button-border);
+    background-color: var(--button);
+    color: var(--base);
+    border-radius: 1.6em;
+    transition: all 80ms ease-out;
+}
+
+.search button:hover {
+    background-color: var(--button-hover);
+}
+
+.search button:active {
+    background-color: var(--button);
+}
+
+.search button svg {
+    width: 1.6em;
+    height: 1.6em;
+}
+
+.search button svg * {
+    color: var(--base);
+    stroke: currentColor;
+    stroke-width: 0.14em;
+}
+
+.search button svg line {
+    stroke-linecap: round;
+}
+
+/* Popup style */
+.popup {
+    position: fixed;
+    top: 86%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--popup);
+    color: var(--base);
+    padding: 0.8em 1.6em;
+    border-radius: 0.6em;
+    font-size: 8.6pt;
+    opacity: 0;
+    transition: opacity 320ms ease-out;
+}
+
+.cite-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 16em;
+    transform: translateX(-50%);
+    background-color: var(--popup);
+    color: var(--base);
+    padding: 0.8em 1.6em;
+    border-radius: 0.6em;
+    font-size: 8.6pt;
+    opacity: 0;
+    transition: opacity 160ms ease-out;
+}
+
+/* Result style */
+.result {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.journal {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 64%;
+}
+
+.fade-text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 8.6pt;
+    color: var(--alert-text);
+}
+
+.journal-ctr {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--base);
+    transition: all 80ms ease-out;
+    text-align: left;
+    border-radius: 0.8em;
+    border: none;
+}
+
+.journal-ctr:hover {
+    background-color: var(--journal-hover);
+}
+
+.journal-ctr:active {
+    background-color: var(--base);
+}
+
+.journal-ctr .title {
+    padding: 1.2em 1.6em;
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.title p {
+    margin: 0;
+    margin-top: 0.4em;
+    font-size: 8.6pt;
+    color: var(--fade-text);
+}
+
+/* Journal details style */
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: right;
+    padding: 0 1.6em;
+    max-height: 0;
+    opacity: 0;
+    gap: 0.8em;
+    overflow: hidden;
+    transition: all 240ms ease-in-out;
+}
+
+.details.show {
+    padding-bottom: 1.6em;
+    max-height: 14em;
+    opacity: 1;
+}
+
+.details p {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    color: var(--fade-text);
+    font-size: 8.6pt;
+}
+
+.details span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4em 1.2em;
+    background-color: var(--button);
+    border-radius: 0.6em;
+    cursor: pointer;
+    text-align: center;
+    gap: 0.4em;
+}
+
+.details span:hover {
+    background-color: var(--button-hover);
+}
+
+.details span:active {
+    background-color: var(--button);
+}
+
+.details span h1 {
+    color: var(--base);
+    font-size: 8.6pt;
+    margin: 0;
+}
+
+.details span svg {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.details span svg path {
+    stroke: var(--base);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 0.16em;
+}
+
+/* Pagination (footer) style */
+.pagination {
+    opacity: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.2em 0;
+}
+
+.pagination span {
+    font-size: 8.6pt;
+    color: var(--fade-text);
+}
+
+.pagination button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1.2em;
+    margin-right: 1.2em;
+    margin-left: 1.2em;
+    border-radius: 1.6em;
+    border: 0.1em solid var(--border);
+    background-color: var(--base);
+    transition: all 80ms ease-out;
+}
+
+.pagination button:hover {
+    background-color: var(--button);
+    border-color: var(--button-border);
+}
+
+.pagination button:active {
+    background-color: var(--base);
+    border-color: var(--border);
+}
+
+.pagination button svg {
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.pagination button svg polyline {
+    stroke: currentColor;
+    stroke-width: 0.2em;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pagination button:hover svg polyline {
+    color: var(--base);
+}
+
+.pagination button:active svg polyline {
+    color: var(--fade-text);
+}
+
+.disable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Loading animation */
+.loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 3.2em;
+    top: 36%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loading svg {
+    width: 2.4em;
+    height: 2.4em;
+    transform-origin: center;
+    animation: rotate 2s linear infinite;
+}
+   
+.loading svg circle {
+    fill: none;
+    stroke: var(--loading);
+    stroke-width: 3.2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash 1.6s ease-in-out infinite;
+}
+   
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+   
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+   
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+   
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}
