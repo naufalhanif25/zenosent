@@ -26,9 +26,13 @@ OS      : Windows
 Author  : Minku Developer
 </pre>
 
-<div>
-    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/img/preview_1.png" alt="preview_1" style="width: 320px; max-width: 100%; height: 180px; max-height: 100%"></img>
-    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/img/preview_2.png" alt="preview_2" style="width: 320px; max-width: 100%; height: 180px; max-height: 100%"></img>
+<!-- Preview -->
+<h2>
+    📸 Preview
+</h2>
+<div align="center">
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/img/preview_1.png" alt="preview_1" style="width: 360px; max-width: 100%; height: 180px; max-height: 100%"></img>
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/img/preview_2.png" alt="preview_2" style="width: 360px; max-width: 100%; height: 180px; max-height: 100%"></img>
 </div>
 
 <!-- Features -->
