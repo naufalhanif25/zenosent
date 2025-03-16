@@ -15,8 +15,9 @@
 <h2>
     📝 Description
 </h2>
-
+<p align="justify">
 Zenosent is a desktop application designed to help users search for journals and scientific papers quickly and efficiently. With a keyword-based search feature, this application allows users to find academic references from various trusted sources. In addition, Zenosent provides an automatic citation feature to facilitate the creation of a bibliography and allows users to access journals directly through their source links. With an intuitive interface and optimal search performance, Zenosent is an ideal solution for students, researchers, and academics in obtaining relevant scientific literature.
+</p>
 
 <pre>
 Name    : Zenosent
@@ -24,6 +25,11 @@ Version : 1.0.0-beta
 OS      : Windows
 Author  : Minku Developer
 </pre>
+
+<div>
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/img/preview_1.png" alt="preview_1" style="width: 320px; max-width: 100%; height: 180px; max-height: 100%"></img>
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/img/preview_2.png" alt="preview_2" style="width: 320px; max-width: 100%; height: 180px; max-height: 100%"></img>
+</div>
 
 <!-- Features -->
 <h2>
