@@ -31,8 +31,11 @@ Author  : Minku Developer
     📸 Preview
 </h2>
 <div align="center">
-    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/img/preview_1.png" alt="preview_1" style="width: 360px; max-width: 100%; height: 200px; max-height: 100%"></img>
-    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/img/preview_2.png" alt="preview_2" style="width: 360px; max-width: 100%; height: 200px; max-height: 100%"></img>
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/doc/main.png" alt="main" style="width: 360px; max-width: 100%; height: 240px; max-height: 100%"></img>
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/doc/sort_asc.png" alt="sort ascending" style="width: 360px; max-width: 100%; height: 240px; max-height: 100%"></img>
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/doc/sort_desc.png" alt="sort descending" style="width: 360px; max-width: 100%; height: 240px; max-height: 100%"></img>
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/doc/journal_details.png" alt="journal details" style="width: 360px; max-width: 100%; height: 240px; max-height: 100%"></img>
+    <img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/doc/citation_options.png" alt="citation options" style="width: 360px; max-width: 100%; height: 240px; max-height: 100%"></img>
 </div>
 
 <!-- Features -->
@@ -41,7 +44,10 @@ Author  : Minku Developer
 </h2>
 <ul>
     <li>Search by keyword</li>
-    <li>Cite</li>
+    <li>Sort results <strong>[New ✨]</strong></li>
+    <li>Keywords highlight <strong>[New ✨]</strong></li>
+    <li>Quick cite</li>
+    <li>3 citation options (APA, MLA, IEEE) <strong>[New ✨]</strong></li>
     <li>Browse source</li>
 </ul>
 

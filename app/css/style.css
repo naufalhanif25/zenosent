@@ -1,0 +1,554 @@
+:root {
+    --absolute-white: #FFF;
+    --light-grey: #D1D1D1;
+    --fade-grey: #B0B0B0;
+    --grey: #888888;
+    --dark-grey: #4F4F4F;
+    --fade-black: #454545;
+    --black: #080808;
+    --light-yellow: #FEF2D6;
+    --fade-yellow: #FDE1AB;
+    --yellow: #FBCA76;
+    --absolute-yellow: #F9B355;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
+    color: var(--black);
+    user-select: none;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--absolute-white);
+}
+
+/* Custom scrollbar style */
+::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--absolute-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--light-grey);
+    border-radius: 1.6em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fade-grey);
+}
+
+/* Header style */
+.header {
+    height: 16em;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* App name style */
+.app-name {
+    height: 6em;
+    width: 100%;
+    margin-bottom: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+}
+
+.app-name img {
+    height: 3.2em;
+    width: 3.2em;
+}
+
+.app-name div h1 {
+    font-size: 24pt;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 0.16em;
+    line-height: 0.8em;
+}
+
+.app-name div p {
+    margin: 0;
+    font-size: 8.6pt;
+    color: var(--dark-grey);
+}
+
+/* Search bar style */
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 0.6em;
+}
+
+.search input {
+    width: 42vw;
+    height: 2.4em;
+    padding: 0 1.6em;
+    border: 0.1em solid var(--light-grey);
+    background-color: var(--absolute-white);
+    border-radius: 1.6em;
+    transition: all 80ms ease-out;
+    box-sizing: border-box;
+}
+
+.search input::placeholder {
+    color: var(--grey);
+}
+
+.search input:focus {
+    border-color: var(--yellow);
+    outline: none;
+}
+
+/* Dropdown style */
+.sort-by {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sort-by button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.2em 0 1.6em;
+    gap: 0.2em;
+    box-sizing: border-box;
+    border: 0.1em solid var(--yellow);
+    background-color: var(--absolute-yellow);
+    color: var(--absolute-white);
+    border-radius: 1.6em;
+    transition: all 80ms ease-out;
+    cursor: pointer;
+}
+
+.sort-by button:hover {
+    background-color: var(--yellow);
+}
+
+.sort-by button:active {
+    background-color: var(--absolute-yellow);
+}
+
+.sort-by button h1 {
+    margin: 0;
+    color: var(--absolute-white);
+}
+
+.sort-by button svg {
+    width: 1.4em;
+    height: 1.4em;
+    transition: transform 160ms ease-out;
+}
+
+.sort-by button svg * {
+    color: var(--absolute-white);
+    stroke: currentColor;
+    stroke-width: 0.16em;
+}
+
+.sort-by button svg path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Popup style */
+.popup {
+    position: fixed;
+    top: 86%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--black);
+    color: var(--absolute-white);
+    padding: 0.8em 1.6em;
+    border-radius: 0.6em;
+    box-sizing: border-box;
+    font-size: 8.6pt;
+    opacity: 0;
+    transition: opacity 160ms ease-out;
+    z-index: 1;
+}
+
+.popup.warning {
+    background-color: var(--absolute-yellow);
+}
+
+/* Result style */
+.result {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.journal {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 64%;
+    overflow: hidden;
+    gap: 1.2em;
+}
+
+.journal-box {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fade-text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 8.6pt;
+    color: var(--absolute-yellow);
+}
+
+.journal-ctr {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--absolute-white);
+    transition: all 80ms ease-out;
+    text-align: left;
+    border-radius: 0.8em;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.journal-ctr:hover {
+    background-color: var(--light-yellow);
+}
+
+.journal-ctr:active {
+    background-color: var(--absolute-white);
+}
+
+.journal-ctr .title {
+    padding: 1.2em 1.6em;
+    box-sizing: border-box;
+}
+
+.title h1 {
+    font-size: 10pt;
+    margin: 0;
+    text-align: justify;
+}
+
+.title h1 strong {
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--absolute-yellow);
+}
+
+.title p {
+    margin: 0;
+    margin-top: 0.4em;
+    font-size: 8.6pt;
+    color: var(--dark-grey);
+    text-align: justify;
+}
+
+.keyword {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.4em;
+    box-sizing: border-box;
+    margin-top: 0.8em;
+}
+
+.keyword-box {
+    padding: 0.2em 1.2em;
+    box-sizing: border-box;
+    border-radius: 1.6em;
+    font-size: 8pt;
+    color: var(--fade-black);
+    background-color: var(--fade-yellow);
+}
+
+/* Journal details style */
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    padding: 0 1.6em;
+    max-height: 0;
+    opacity: 0;
+    gap: 0.3em;
+    overflow: hidden;
+    transition: all 240ms ease-in-out;
+    box-sizing: border-box;
+}
+
+.details.show {
+    padding-bottom: 1.6em;
+    max-height: 16em;
+    opacity: 1;
+}
+
+.details p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    color: var(--dark-grey);
+    font-size: 8.6pt;
+    margin: 0;
+    margin-bottom: 0.8em;
+}
+
+.details p strong {
+    background-color: var(--fade-yellow);
+    color: var(--fade-black);
+    font-size: 8.6pt;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+    border-radius: 0.2em;
+}
+
+.cite-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    gap: 0.2em;
+}
+
+.cite-buttons.gap {
+    gap: 0.8em;
+}
+
+.cite-buttons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.36em 1.2em;
+    border: 0.1em solid var(--yellow);
+    background-color: var(--absolute-yellow);
+    border-radius: 0.6em;
+    cursor: pointer;
+    text-align: center;
+    gap: 0.4em;
+    box-sizing: border-box;
+}
+
+.cite-buttons span:hover {
+    background-color: var(--yellow);
+}
+
+.cite-buttons span:active {
+    background-color: var(--absolute-yellow);
+}
+
+.cite-buttons div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.6em;
+    border: 0.1em solid var(--yellow);
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: width 240ms ease-out, opacity 240ms ease-out, visibility 0s linear 240ms;
+}
+
+.cite-buttons div.open {
+    width: calc(3.6em * 3);
+    opacity: 1;
+    visibility: visible;
+    transition: width 240ms ease-out, opacity 240ms ease-out;
+}
+
+.cite-buttons div span {
+    border: none;
+    background-color: transparent;
+    width: 3.6em;
+    border-radius: 0;
+}
+
+.cite-buttons div span h1 {
+    color: var(--absolute-yellow);
+    font-weight: 500;
+}
+
+.cite-buttons div span:hover {
+    background-color: var(--absolute-yellow);
+}
+
+.cite-buttons div span:active {
+    background-color: transparent;
+}
+
+.cite-buttons div span:hover h1 {
+    color: var(--absolute-white);
+    font-weight: 400;
+}
+
+.cite-buttons div span:active h1 {
+    color: var(--absolute-yellow);
+    font-weight: 500;
+}
+
+.cite-buttons span h1 {
+    color: var(--absolute-white);
+    font-size: 8.6pt;
+    margin: 0;
+}
+
+.cite-buttons span svg {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.cite-buttons span svg path {
+    stroke: var(--absolute-white);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 0.16em;
+}
+
+/* Pagination (footer) style */
+.pagination {
+    opacity: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.2em 0;
+    box-sizing: border-box;
+}
+
+.pagination span {
+    font-size: 8.6pt;
+    color: var(--dark-grey);
+}
+
+.pagination button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1.2em;
+    box-sizing: border-box;
+    margin-right: 1.2em;
+    margin-left: 1.2em;
+    border-radius: 1.6em;
+    border: 0.1em solid var(--light-grey);
+    background-color: var(--absolute-white);
+    transition: 80ms ease-out;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.pagination button svg {
+    width: 0.8em;
+    height: 0.8em;
+    pointer-events: none;
+}
+
+.pagination button:hover {
+    background-color: var(--absolute-yellow);
+    border-color: var(--yellow);
+}
+
+.pagination button:active {
+    background-color: var(--absolute-white);
+    border-color: var(--light-grey);
+}
+
+.pagination button:hover svg polyline {
+    stroke: var(--absolute-white);
+}
+
+.pagination button:active svg polyline {
+    stroke: var(--dark-grey);
+}
+
+.pagination button svg polyline {
+    stroke: currentColor;
+    stroke-width: 0.2em;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.disable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Loading animation */
+.loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 3.2em;
+    top: 36%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loading svg {
+    width: 2.4em;
+    height: 2.4em;
+    transform-origin: center;
+    animation: rotate 2s linear infinite;
+}
+   
+.loading svg circle {
+    fill: none;
+    stroke: var(--fade-grey);
+    stroke-width: 0.24em;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash 1.6s ease-in-out infinite;
+}
+   
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+   
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+   
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+   
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}
