@@ -62,7 +62,14 @@ Author  : Minku Developer
     <li>
         <a href="https://github.com/naufalhanif25/zenosent/raw/refs/heads/main/release-builds/zenosent-linux-x64.tar" download>Linux</a>
     </li>
-</ul
+</ul>
+
+<!-- Powered by -->
+<h2>
+    ⚙️ Powered by
+</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://seeklogo.com/images/C/crossref-logo-4129AAC64B-seeklogo.com.png" alt="main" style="width: 160px; max-width: 100%; height: 60px; max-height: 100%"></img>
 
 <!-- Donation -->
 <h2>
