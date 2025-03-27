@@ -69,7 +69,7 @@ Author  : Minku Developer
     ⚙️ Powered by
 </h2>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://scispace.com/resources/content/images/2021/07/Crossref-Logo.jpeg" alt="crossref" style="width: 160px; max-width: 100%; height: 60px; max-height: 100%"></img>
+<img src="https://github.com/naufalhanif25/zenosent/blob/main/assets/doc/crossref.png" alt="crossref" style="width: 160px; max-width: 100%; height: 60px; max-height: 100%"></img>
 
 <!-- Donation -->
 <h2>
