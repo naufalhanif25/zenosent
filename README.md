@@ -22,7 +22,7 @@ Zenosent is a desktop application designed to help users search for journals and
 <pre>
 Name    : Zenosent
 Version : 1.0.0-beta
-OS      : Windows
+OS      : Windows, Linux
 Author  : Minku Developer
 </pre>
 
