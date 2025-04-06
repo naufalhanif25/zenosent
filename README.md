@@ -57,10 +57,10 @@ Author  : Minku Developer
 </h2>
 <ul>
     <li>
-        <a href="https://github.com/naufalhanif25/zenosent/raw/refs/heads/main/release-builds/zenosent-win32-ia32.zip" download>Windows</a>
+        <a href="https://drive.usercontent.google.com/download?id=10ot2Pzp1jpn67mzEcg6dRoSKeYp3XnHd&export=download&authuser=5&confirm=t&uuid=4b2ffcb2-a7b3-4afd-a59e-a224b9d4727c&at=APcmpoxh08Iz9Rf8m6iy2maEPHON:1743911490395" download>Windows</a>
     </li>
     <li>
-        <a href="https://github.com/naufalhanif25/zenosent/raw/refs/heads/main/release-builds/zenosent-linux-x64.tar" download>Linux</a>
+        <a href="https://drive.usercontent.google.com/download?id=1rYeMGWQ1s56kv2RmGDA3GIF7nTj3rzdE&export=download&authuser=5&confirm=t&uuid=b0fbb0cb-5aba-4e19-85f9-99040ae1d618&at=APcmpozJAkuiMVMOHtUmpuJ5fR94:1743911557835" download>Linux</a>
     </li>
 </ul>
 
